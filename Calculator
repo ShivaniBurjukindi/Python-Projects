@@ -1,0 +1,37 @@
+def add(n1, n2):
+    return n1 + n2
+def sub(n1, n2):
+    return n1-n2
+def mul(n1, n2):
+    return n1*n2
+def div(n1, n2):
+    return n1/n2
+print("What's the first number?")
+num1=int(input())
+while True:
+    print("+\n-\n*\n%\n")
+    print("Pick an operation: ")
+    op = input()
+    print("What's the second number?")
+    num2 = int(input())
+    if op == '+':
+        res = add(num1, num2)
+        print(f'{num1}+{num2}={res}')
+    elif op == '-':
+        res = sub(num1, num2)
+        print(f'{num1}-{num2}={res}')
+    elif op == '*':
+        res = mul(num1, num2)
+        print(f'{num1}*{num2}={res}')
+    elif op == '%':
+        res = div(num1, num2)
+        print(f'{num1}%{num2}={res}')
+    print(f"Type 'y' to continue calculating with {res} or type 'n' to start a new calculation:")
+    contin=input()
+    if contin=='y':
+        num1=res
+    elif contin=='n':
+        print("What's the first number?")
+        num1 = int(input())
+    else:
+        break
